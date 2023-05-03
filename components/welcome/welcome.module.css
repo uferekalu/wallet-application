@@ -1,0 +1,27 @@
+@media screen and (min-width: 576px) {
+    .welcome {
+        width: 60%;
+    }
+    .btnStyles {
+        width: 60%;
+    }
+    .getStartedDesktop {
+        background: no-repeat url("../../public/img/background.png");
+        background-size: cover;
+    }
+    .getStartedMobile{
+        display: none;
+    }
+}
+@media screen and (max-width: 576px) {
+    .btnStyles {
+        width: 100%;
+    }
+    .getStartedDesktop {
+        display: none;
+    }
+    .getStartedMobile {
+        background: no-repeat url("../../public/img/background.png");
+        background-size: cover;
+    }
+}

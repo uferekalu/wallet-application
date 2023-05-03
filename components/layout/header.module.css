@@ -1,0 +1,43 @@
+@media screen and (max-width: 575px) {
+  .walletHeader {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .mobileSidebar {
+    display: block;
+    position: absolute;
+    width: 50vw;
+    height: 50vh;
+    background: #f8bb18;
+    top: 100px;
+    left: 0;
+    padding: 20px;
+
+  }
+  .mobileSidebarNo {
+    display: none
+  }
+  .mobileSidebar_content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .walletHeader {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .hamburger {
+    display: none;
+  }
+  .mobileSidebar {
+    display: 'none'
+  }
+  .mobileSidebar_content {
+    display: none;
+  }
+}
