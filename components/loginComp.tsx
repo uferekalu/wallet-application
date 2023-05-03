@@ -1,15 +1,12 @@
-import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import ReusableSignupContent from "./reusableSignupContent";
 import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
-export default function SignupComp(props: any) {
+export default function LoginComp(props: any) {
   const [isPassword] = useState(true);
-  const [isConfirmPassword] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-
   return (
     <>
       <div
@@ -26,7 +23,7 @@ export default function SignupComp(props: any) {
             color: "black",
           }}
         >
-          Signup and start <br /> transfering
+          Login and start <br /> transfering
         </Form.Label>
       </div>
       <div
@@ -78,14 +75,23 @@ export default function SignupComp(props: any) {
         showPassword={showPassword}
         setShowPassword={setShowPassword}
       />
-      <ReusableSignupContent
-        caption="Reenter Password"
-        placeholder="Enter your password again"
-        type={showConfirmPassword ? "text" : "password"}
-        isConfirmPassword={isConfirmPassword}
-        showConfirmPassword={showConfirmPassword}
-        setShowConfirmPassword={setShowConfirmPassword}
-      />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "flex-end",
+        }}
+      >
+        <Form.Label
+          style={{
+            fontSize: "11px",
+            fontWeight: 400,
+            color: "#1A87DD",
+            marginTop: "20px",
+          }}
+        >
+          Forgot password?
+        </Form.Label>
+      </div>
       <div
         style={{
           display: "flex",
@@ -112,9 +118,9 @@ export default function SignupComp(props: any) {
             alignItems: "center",
           }}
         >
-          Create new account
+          Login
         </Button>
-        <Link className={styles.link} href={"/login"}>
+        <Link className={styles.link} href={"/signup"}>
           <Form.Label
             style={{
               fontSize: "11px",
@@ -124,7 +130,7 @@ export default function SignupComp(props: any) {
               cursor: "pointer",
             }}
           >
-            Already have an account?
+            Create new account
           </Form.Label>
         </Link>
       </div>
