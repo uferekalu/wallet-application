@@ -110,7 +110,27 @@ export default function SignupComp(props: any) {
         isPassword={isPassword}
         showPassword={showPassword}
         setShowPassword={setShowPassword}
+        existingAccount={existingAccount}
       />
+      {existingAccount && (
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "flex-end",
+          }}
+        >
+          <Form.Label
+            style={{
+              fontSize: "11px",
+              fontWeight: 400,
+              color: "#1A87DD",
+              marginTop: '20px'
+            }}
+          >
+            Forgot password?
+          </Form.Label>
+        </div>
+      )}
       {!existingAccount && (
         <ReusableSignupContent
           caption="Reenter Password"
@@ -133,7 +153,7 @@ export default function SignupComp(props: any) {
       >
         <Button
           className={styles.link}
-        //   onClick={handleCreateNewAccount}
+          //   onClick={handleCreateNewAccount}
           style={{
             background: "#1A87DD",
             borderRadius: "10px",
