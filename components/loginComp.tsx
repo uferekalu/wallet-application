@@ -1,18 +1,16 @@
 import React, { useState } from "react";
+import { Button, Form } from "react-bootstrap";
 import ReusableSignupContent from "./reusableSignupContent";
 import SocialComp from "./socials";
 import Heading from "./heading";
 import LinkComp from "./linkComp";
 
-export default function SignupComp(props: any) {
+export default function LoginComp(props: any) {
   const [isPassword] = useState(true);
-  const [isConfirmPassword] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-
   return (
     <>
-      <Heading caption1="Signup and start" caption2="transfering" />
+      <Heading caption1="Login and start" caption2="transfering" />
       <SocialComp />
       <ReusableSignupContent
         caption="Email"
@@ -27,19 +25,24 @@ export default function SignupComp(props: any) {
         showPassword={showPassword}
         setShowPassword={setShowPassword}
       />
-      <ReusableSignupContent
-        caption="Reenter Password"
-        placeholder="Enter your password again"
-        type={showConfirmPassword ? "text" : "password"}
-        isConfirmPassword={isConfirmPassword}
-        showConfirmPassword={showConfirmPassword}
-        setShowConfirmPassword={setShowConfirmPassword}
-      />
-      <LinkComp
-        caption1="Create new account"
-        caption2="Already have an account?"
-        url={"/login"}
-      />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "flex-end",
+        }}
+      >
+        <Form.Label
+          style={{
+            fontSize: "11px",
+            fontWeight: 400,
+            color: "#1A87DD",
+            marginTop: "20px",
+          }}
+        >
+          Forgot password?
+        </Form.Label>
+      </div>
+      <LinkComp caption1="Login" caption2="Create new account" url={"/signup"} />
     </>
   );
 }

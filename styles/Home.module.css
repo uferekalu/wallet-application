@@ -9,6 +9,12 @@
   .signup {
       width: 60%;
   }
+  .dashboard {
+    width: 60%;
+  }
+  .dashboardComp {
+    width: 350px;
+  }
 }
 @media screen and (max-width: 575px) {
   .container {
