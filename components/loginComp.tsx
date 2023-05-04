@@ -1,67 +1,17 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import ReusableSignupContent from "./reusableSignupContent";
-import styles from "../styles/Home.module.css";
-import Link from "next/link";
+import SocialComp from "./socials";
+import Heading from "./heading";
+import LinkComp from "./linkComp";
 
 export default function LoginComp(props: any) {
   const [isPassword] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "flex-start",
-          marginTop: "30px",
-        }}
-      >
-        <Form.Label
-          style={{
-            fontSize: "19px",
-            fontWeight: 600,
-            color: "black",
-          }}
-        >
-          Login and start <br /> transfering
-        </Form.Label>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          marginTop: "80px",
-        }}
-      >
-        <Button
-          style={{
-            background: "#F3F4F5",
-            borderRadius: "10px",
-            color: "black",
-            fontSize: "14px",
-            width: "150px",
-            border: "none",
-            height: "40px",
-            fontWeight: "500",
-          }}
-        >
-          Google
-        </Button>
-        <Button
-          style={{
-            background: "#F3F4F5",
-            borderRadius: "10px",
-            color: "black",
-            fontSize: "14px",
-            width: "150px",
-            border: "none",
-            height: "40px",
-            fontWeight: "500",
-          }}
-        >
-          Facebook
-        </Button>
-      </div>
+      <Heading caption1="Login and start" caption2="transfering" />
+      <SocialComp />
       <ReusableSignupContent
         caption="Email"
         placeholder="Enter your email"
@@ -92,48 +42,7 @@ export default function LoginComp(props: any) {
           Forgot password?
         </Form.Label>
       </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "5px",
-          marginTop: "50px",
-        }}
-      >
-        <Button
-          className={styles.link}
-          //   onClick={handleCreateNewAccount}
-          style={{
-            background: "#1A87DD",
-            borderRadius: "10px",
-            color: "white",
-            fontSize: "14px",
-            height: "40px",
-            fontWeight: "500",
-            width: "100%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          Login
-        </Button>
-        <Link className={styles.link} href={"/signup"}>
-          <Form.Label
-            style={{
-              fontSize: "11px",
-              fontWeight: "600",
-              color: "#1A87DD",
-              marginTop: "20px",
-              cursor: "pointer",
-            }}
-          >
-            Create new account
-          </Form.Label>
-        </Link>
-      </div>
+      <LinkComp caption1="Login" caption2="Create new account" url={"/signup"} />
     </>
   );
 }

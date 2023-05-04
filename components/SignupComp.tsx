@@ -1,8 +1,8 @@
-import Link from "next/link";
-import React, { useState, useEffect } from "react";
-import { Button, Form } from "react-bootstrap";
+import React, { useState } from "react";
 import ReusableSignupContent from "./reusableSignupContent";
-import styles from "../styles/Home.module.css";
+import SocialComp from "./socials";
+import Heading from "./heading";
+import LinkComp from "./linkComp";
 
 export default function SignupComp(props: any) {
   const [isPassword] = useState(true);
@@ -12,59 +12,8 @@ export default function SignupComp(props: any) {
 
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "flex-start",
-          marginTop: "30px",
-        }}
-      >
-        <Form.Label
-          style={{
-            fontSize: "19px",
-            fontWeight: 600,
-            color: "black",
-          }}
-        >
-          Signup and start <br /> transfering
-        </Form.Label>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          marginTop: "80px",
-        }}
-      >
-        <Button
-          style={{
-            background: "#F3F4F5",
-            borderRadius: "10px",
-            color: "black",
-            fontSize: "14px",
-            width: "150px",
-            border: "none",
-            height: "40px",
-            fontWeight: "500",
-          }}
-        >
-          Google
-        </Button>
-        <Button
-          style={{
-            background: "#F3F4F5",
-            borderRadius: "10px",
-            color: "black",
-            fontSize: "14px",
-            width: "150px",
-            border: "none",
-            height: "40px",
-            fontWeight: "500",
-          }}
-        >
-          Facebook
-        </Button>
-      </div>
+      <Heading caption1="Signup and start" caption2="transfering" />
+      <SocialComp />
       <ReusableSignupContent
         caption="Email"
         placeholder="Enter your email"
@@ -86,48 +35,11 @@ export default function SignupComp(props: any) {
         showConfirmPassword={showConfirmPassword}
         setShowConfirmPassword={setShowConfirmPassword}
       />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "5px",
-          marginTop: "50px",
-        }}
-      >
-        <Button
-          className={styles.link}
-          //   onClick={handleCreateNewAccount}
-          style={{
-            background: "#1A87DD",
-            borderRadius: "10px",
-            color: "white",
-            fontSize: "14px",
-            height: "40px",
-            fontWeight: "500",
-            width: "100%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          Create new account
-        </Button>
-        <Link className={styles.link} href={"/login"}>
-          <Form.Label
-            style={{
-              fontSize: "11px",
-              fontWeight: "600",
-              color: "#1A87DD",
-              marginTop: "20px",
-              cursor: "pointer",
-            }}
-          >
-            Already have an account?
-          </Form.Label>
-        </Link>
-      </div>
+      <LinkComp
+        caption1="Create new account"
+        caption2="Already have an account?"
+        url={"/login"}
+      />
     </>
   );
 }
