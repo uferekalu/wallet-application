@@ -1,8 +1,8 @@
-import Head from "next/head";
-import DashboardComp from "@/components/dashboard";
-import styles from "@/styles/Home.module.css";
+import Head from 'next/head';
+import DashboardComp from '@/components/dashboard';
+import styles from '@/styles/Home.module.css';
 
-export default function Dashboard(props: any) {
+export default function Dashboard() {
   return (
     <>
       <Head>
@@ -14,16 +14,16 @@ export default function Dashboard(props: any) {
       <div
         className={styles.dashboard}
         style={{
-          display: "flex",
-          flexDirection: "column",
+          display: 'flex',
+          flexDirection: 'column',
         }}
       >
         <div
           className={styles.dashboardComp}
           style={{
-            display: "flex",
-            flexDirection: "column",
-            height: "812px",
+            display: 'flex',
+            flexDirection: 'column',
+            height: '812px',
           }}
         >
           <DashboardComp />

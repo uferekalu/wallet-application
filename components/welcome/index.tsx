@@ -1,8 +1,8 @@
-import Image from "next/image";
-import React, { useState, useEffect } from "react";
-import { Form, Button } from "react-bootstrap";
-import styles from "./welcome.module.css";
-import GetStartedContent from "../getStartedContent";
+import Image from 'next/image';
+import React, { useState, useEffect } from 'react';
+import { Form, Button } from 'react-bootstrap';
+import styles from './welcome.module.css';
+import GetStartedContent from '../getStartedContent';
 
 export default function Welcome(props: any) {
   const [step] = useState(0);
@@ -51,20 +51,19 @@ export default function Welcome(props: any) {
       {props.getStarted ? (
         <div
           style={{
-            display: "flex",
-            flexDirection: "column",
+            display: 'flex',
+            flexDirection: 'column',
           }}
         >
           <div
             className={styles.getStartedDesktop}
             style={{
               // display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              width: "375px",
-              height: "200vh",
-              padding: "20px",
-              
+              justifyContent: 'center',
+              alignItems: 'center',
+              width: '375px',
+              height: '200vh',
+              padding: '20px',
             }}
           >
             <GetStartedContent />
@@ -73,11 +72,11 @@ export default function Welcome(props: any) {
             className={styles.getStartedMobile}
             style={{
               // display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              width: "100%",
-              height: "200vh",
-              padding: "20px",
+              justifyContent: 'center',
+              alignItems: 'center',
+              width: '100%',
+              height: '200vh',
+              padding: '20px',
             }}
           >
             <GetStartedContent />
@@ -88,21 +87,21 @@ export default function Welcome(props: any) {
           <div
             className={styles.welcome}
             style={{
-              display: "flex",
-              flexDirection: "column",
+              display: 'flex',
+              flexDirection: 'column',
             }}
           >
             <div
               style={{
-                display: "flex",
-                justifyContent: "space-between",
+                display: 'flex',
+                justifyContent: 'space-between',
               }}
             >
               <Form.Label
                 style={{
-                  fontSize: "14px",
-                  color: "black",
-                  fontWeight: "500",
+                  fontSize: '14px',
+                  color: 'black',
+                  fontWeight: '500',
                 }}
               >
                 {addAllAccounts
@@ -125,13 +124,13 @@ export default function Welcome(props: any) {
                 style={
                   sendRequestPayments
                     ? {
-                        display: "none",
+                        display: 'none',
                       }
                     : {
-                        fontSize: "14px",
-                        color: "#1A87DD",
-                        fontWeight: "500",
-                        cursor: "pointer",
+                        fontSize: '14px',
+                        color: '#1A87DD',
+                        fontWeight: '500',
+                        cursor: 'pointer',
                       }
                 }
               >
@@ -140,26 +139,26 @@ export default function Welcome(props: any) {
             </div>
             <div
               style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                marginTop: "100px",
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: '100px',
               }}
             >
               <Image
                 style={{
-                  width: "300px",
-                  maxWidth: "100%",
+                  width: '300px',
+                  maxWidth: '100%',
                 }}
                 src={
                   addAllAccounts
-                    ? "/img/illustration.png"
+                    ? '/img/illustration.png'
                     : trackAcitvities
-                    ? "/img/illustration1.png"
+                    ? '/img/illustration1.png'
                     : sendRequestPayments
-                    ? "/img/illustration2.png"
-                    : ""
+                    ? '/img/illustration2.png'
+                    : ''
                 }
                 width="300"
                 height="220"
@@ -167,57 +166,57 @@ export default function Welcome(props: any) {
               />
               <Form.Label
                 style={{
-                  fontSize: "14px",
-                  color: "black",
-                  fontWeight: "600",
-                  textAlign: "center",
-                  marginTop: "50px",
+                  fontSize: '14px',
+                  color: 'black',
+                  fontWeight: '600',
+                  textAlign: 'center',
+                  marginTop: '50px',
                 }}
               >
                 {addAllAccounts
-                  ? "Add all accounts & manage"
+                  ? 'Add all accounts & manage'
                   : trackAcitvities
-                  ? "Track your activity"
+                  ? 'Track your activity'
                   : sendRequestPayments
-                  ? "Send & request payments"
+                  ? 'Send & request payments'
                   : undefined}
               </Form.Label>
               <Form.Label
                 style={{
-                  fontSize: "11px",
-                  color: "#1A1A1A",
-                  fontWeight: "400",
-                  textAlign: "center",
+                  fontSize: '11px',
+                  color: '#1A1A1A',
+                  fontWeight: '400',
+                  textAlign: 'center',
                 }}
               >
                 {addAllAccounts
-                  ? "You can add all accounts in one place \n and use it to send and request"
+                  ? 'You can add all accounts in one place \n and use it to send and request'
                   : trackAcitvities
-                  ? "You can track your income, expenses, activities and all statistics."
+                  ? 'You can track your income, expenses, activities and all statistics.'
                   : sendRequestPayments
-                  ? "You can send or receive any payments from your accounts"
+                  ? 'You can send or receive any payments from your accounts'
                   : undefined}
               </Form.Label>
               <div
                 style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  gap: "5px",
-                  marginTop: "20px",
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  gap: '5px',
+                  marginTop: '20px',
                 }}
               >
                 <Image
                   onClick={handleAddAllAccounts}
                   style={{
-                    width: "15px",
-                    maxWidth: "100%",
-                    cursor: "pointer",
+                    width: '15px',
+                    maxWidth: '100%',
+                    cursor: 'pointer',
                   }}
                   src={
                     addAllAccounts
-                      ? "/img/rectangle.png"
-                      : "/img/rectangle1.png"
+                      ? '/img/rectangle.png'
+                      : '/img/rectangle1.png'
                   }
                   width="15"
                   height="5"
@@ -226,14 +225,14 @@ export default function Welcome(props: any) {
                 <Image
                   onClick={handleTrackActivities}
                   style={{
-                    width: "15px",
-                    maxWidth: "100%",
-                    cursor: "pointer",
+                    width: '15px',
+                    maxWidth: '100%',
+                    cursor: 'pointer',
                   }}
                   src={
                     trackAcitvities
-                      ? "/img/rectangle.png"
-                      : "/img/rectangle1.png"
+                      ? '/img/rectangle.png'
+                      : '/img/rectangle1.png'
                   }
                   width="15"
                   height="5"
@@ -242,14 +241,14 @@ export default function Welcome(props: any) {
                 <Image
                   onClick={handleSendRequestPayments}
                   style={{
-                    width: "15px",
-                    maxWidth: "100%",
-                    cursor: "pointer",
+                    width: '15px',
+                    maxWidth: '100%',
+                    cursor: 'pointer',
                   }}
                   src={
                     sendRequestPayments
-                      ? "/img/rectangle.png"
-                      : "/img/rectangle1.png"
+                      ? '/img/rectangle.png'
+                      : '/img/rectangle1.png'
                   }
                   width="15"
                   height="5"
@@ -260,23 +259,23 @@ export default function Welcome(props: any) {
             {sendRequestPayments && (
               <div
                 style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  gap: "5px",
-                  marginTop: "30px",
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  gap: '5px',
+                  marginTop: '30px',
                 }}
               >
                 <Button
                   className={styles.btnStyles}
                   onClick={() => props.setGetStarted(true)}
                   style={{
-                    background: "#1A87DD",
-                    borderRadius: "10px",
-                    color: "white",
-                    fontSize: "14px",
-                    height: "40px",
-                    fontWeight: "500",
+                    background: '#1A87DD',
+                    borderRadius: '10px',
+                    color: 'white',
+                    fontSize: '14px',
+                    height: '40px',
+                    fontWeight: '500',
                   }}
                 >
                   Get Started

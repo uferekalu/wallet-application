@@ -1,5 +1,5 @@
 .signup {
-  background: no-repeat url("../public/img/signupbg.png");
+  background: no-repeat url('../public/img/signupbg.png');
   /* background-size: cover; */
 }
 .link {
@@ -7,7 +7,7 @@
 }
 @media screen and (min-width: 576px) {
   .signup {
-      width: 60%;
+    width: 60%;
   }
   .dashboard {
     width: 60%;
@@ -42,11 +42,14 @@
   }
   .desktopSidebar {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    /* justify-content: center; */
     /* align-items: center; */
     width: 20%;
     background: #f8bb18;
     height: 150vh;
+    padding-left: 30px;
+    padding-right: 30px;
   }
   .desktopContent {
     display: flex;
@@ -59,4 +62,10 @@
   .mobileContent {
     display: none;
   }
+  /* .sidebarContent:hover {
+    padding: 10px;
+    background: rgb(237, 247, 148);
+    height: 40px;
+    border-radius: 8px;
+  } */
 }

@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import ReusableSignupContent from "./reusableSignupContent";
-import SocialComp from "./socials";
-import Heading from "./heading";
-import LinkComp from "./linkComp";
+import React, { useState } from 'react';
+import ReusableSignupContent from './reusableSignupContent';
+import SocialComp from './socials';
+import Heading from './heading';
+import LinkComp from './linkComp';
 
 export default function SignupComp(props: any) {
   const [isPassword] = useState(true);
@@ -22,7 +22,7 @@ export default function SignupComp(props: any) {
       <ReusableSignupContent
         caption="Password"
         placeholder="Enter your password"
-        type={showPassword ? "text" : "password"}
+        type={showPassword ? 'text' : 'password'}
         isPassword={isPassword}
         showPassword={showPassword}
         setShowPassword={setShowPassword}
@@ -30,7 +30,7 @@ export default function SignupComp(props: any) {
       <ReusableSignupContent
         caption="Reenter Password"
         placeholder="Enter your password again"
-        type={showConfirmPassword ? "text" : "password"}
+        type={showConfirmPassword ? 'text' : 'password'}
         isConfirmPassword={isConfirmPassword}
         showConfirmPassword={showConfirmPassword}
         setShowConfirmPassword={setShowConfirmPassword}
@@ -38,7 +38,7 @@ export default function SignupComp(props: any) {
       <LinkComp
         caption1="Create new account"
         caption2="Already have an account?"
-        url={"/login"}
+        url={'/login'}
       />
     </>
   );

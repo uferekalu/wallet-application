@@ -9,15 +9,14 @@
     display: block;
     position: absolute;
     width: 50vw;
-    height: 50vh;
+    height: 100vh;
     background: #f8bb18;
     top: 100px;
     left: 0;
     padding: 20px;
-
   }
   .mobileSidebarNo {
-    display: none
+    display: none;
   }
   .mobileSidebar_content {
     display: flex;
@@ -35,7 +34,7 @@
     display: none;
   }
   .mobileSidebar {
-    display: 'none'
+    display: 'none';
   }
   .mobileSidebar_content {
     display: none;
