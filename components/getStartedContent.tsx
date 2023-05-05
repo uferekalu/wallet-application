@@ -1,25 +1,25 @@
-import Image from "next/image";
-import React, { useState } from 'react'
-import Link from "next/link";
-import { Button, Form } from "react-bootstrap";
-import styles from '../styles/Home.module.css'
+import Image from 'next/image';
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { Button, Form } from 'react-bootstrap';
+import styles from '../styles/Home.module.css';
 
 export default function GetStartedContent(props: any) {
   return (
     <>
       <div
         style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          marginTop: "212px",
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginTop: '212px',
         }}
       >
         <Image
           style={{
-            width: "100px",
-            maxWidth: "100%",
+            width: '100px',
+            maxWidth: '100%',
           }}
           src="/img/logo.png"
           width="100"
@@ -28,10 +28,10 @@ export default function GetStartedContent(props: any) {
         />
         <Form.Label
           style={{
-            fontSize: "11px",
-            fontWeight: "600",
-            color: "white",
-            marginTop: "115px",
+            fontSize: '11px',
+            fontWeight: '600',
+            color: 'white',
+            marginTop: '115px',
           }}
         >
           The best way to <b>Transfer Money</b> safely
@@ -39,44 +39,46 @@ export default function GetStartedContent(props: any) {
       </div>
       <div
         style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "5px",
-          marginTop: "30px",
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: '5px',
+          marginTop: '30px',
         }}
       >
         <Link
           className={styles.link}
-          href={"/signup"}
+          href={'/signup'}
           style={{
-            background: "#1A87DD",
-            borderRadius: "10px",
-            color: "white",
-            fontSize: "14px",
-            height: "40px",
-            fontWeight: "500",
-            marginTop: "301px",
-            width: "100%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
+            background: '#1A87DD',
+            borderRadius: '10px',
+            color: 'white',
+            fontSize: '14px',
+            height: '40px',
+            fontWeight: '500',
+            marginTop: '301px',
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
           Create new account
         </Link>
-        <Form.Label
-          style={{
-            fontSize: "11px",
-            fontWeight: "600",
-            color: "#1A87DD",
-            marginTop: "20px",
-            cursor: "pointer",
-          }}
-        >
-          Already have an account?
-        </Form.Label>
+        <Link href={'/login'} className={styles.link}>
+          <Form.Label
+            style={{
+              fontSize: '11px',
+              fontWeight: '600',
+              color: '#1A87DD',
+              marginTop: '20px',
+              cursor: 'pointer',
+            }}
+          >
+            Already have an account?
+          </Form.Label>
+        </Link>
       </div>
     </>
   );

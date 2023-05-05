@@ -1,39 +1,39 @@
-import Image from "next/image";
-import { Button, Form } from "react-bootstrap";
-import ViewAll from "./viewAll";
+import Image from 'next/image';
+import { Button, Form } from 'react-bootstrap';
+import ViewAll from './viewAll';
 
 export default function DashboardComp(props: any) {
   return (
     <>
       <div
         style={{
-          display: "flex",
-          flexDirection: "column",
-          height: "250px",
-          background: "#1A87DD",
-          marginTop: "20px",
-          padding: "20px",
+          display: 'flex',
+          flexDirection: 'column',
+          height: '250px',
+          background: '#1A87DD',
+          marginTop: '20px',
+          padding: '20px',
         }}
       >
         <div
           style={{
-            display: "flex",
-            justifyContent: "space-between",
+            display: 'flex',
+            justifyContent: 'space-between',
           }}
         >
           <Form.Label
             style={{
-              fontSize: "14px",
+              fontSize: '14px',
               fontWeight: 600,
-              color: "white",
+              color: 'white',
             }}
           >
             Dashboard
           </Form.Label>
           <Image
             style={{
-              width: "40px",
-              maxWidth: "100%",
+              width: '40px',
+              maxWidth: '100%',
             }}
             src="/img/profilepic.png"
             width="40"
@@ -43,18 +43,18 @@ export default function DashboardComp(props: any) {
         </div>
         <Form.Label
           style={{
-            fontSize: "11px",
-            color: "#FFFFFF",
-            marginTop: "37px",
+            fontSize: '11px',
+            color: '#FFFFFF',
+            marginTop: '37px',
           }}
         >
           Hi, Amanda!
         </Form.Label>
         <Form.Label
           style={{
-            fontSize: "14px",
-            color: "#FFFFFF",
-            marginTop: "10px",
+            fontSize: '14px',
+            color: '#FFFFFF',
+            marginTop: '10px',
             fontWeight: 600,
           }}
         >
@@ -62,24 +62,24 @@ export default function DashboardComp(props: any) {
         </Form.Label>
         <div
           style={{
-            display: "flex",
-            justifyContent: "space-between",
+            display: 'flex',
+            justifyContent: 'space-between',
           }}
         >
           <Form.Label
             style={{
-              fontSize: "27px",
+              fontSize: '27px',
               fontWeight: 600,
-              color: "white",
+              color: 'white',
             }}
           >
             $124.57
           </Form.Label>
           <Image
             style={{
-              width: "24px",
-              maxWidth: "100%",
-              marginTop: "10px",
+              width: '24px',
+              maxWidth: '100%',
+              marginTop: '10px',
             }}
             src="/img/notification.png"
             width="24"
@@ -90,37 +90,37 @@ export default function DashboardComp(props: any) {
       </div>
       <div
         style={{
-          display: "flex",
-          flexDirection: "column",
-          marginTop: "20px",
-          padding: "20px",
+          display: 'flex',
+          flexDirection: 'column',
+          marginTop: '20px',
+          padding: '20px',
         }}
       >
         <div
           style={{
-            display: "flex",
-            justifyContent: "space-between",
-            gap: "5px",
+            display: 'flex',
+            justifyContent: 'space-between',
+            gap: '5px',
           }}
         >
           <Button
             style={{
-              background: "#F8BB18",
-              borderRadius: "10px",
-              color: "black",
-              fontSize: "14px",
-              width: "150px",
-              border: "none",
-              height: "40px",
-              fontWeight: "500",
-              display: "flex",
-              gap: "5px",
+              background: '#F8BB18',
+              borderRadius: '10px',
+              color: 'black',
+              fontSize: '14px',
+              width: '150px',
+              border: 'none',
+              height: '40px',
+              fontWeight: '500',
+              display: 'flex',
+              gap: '5px',
             }}
           >
             <Image
               style={{
-                width: "21px",
-                maxWidth: "100%",
+                width: '21px',
+                maxWidth: '100%',
               }}
               src="/img/send_icon.png"
               width="21"
@@ -129,9 +129,9 @@ export default function DashboardComp(props: any) {
             />
             <Form.Label
               style={{
-                fontSize: "12px",
+                fontSize: '12px',
                 fontWeight: 500,
-                color: "black",
+                color: 'black',
               }}
             >
               Send Money
@@ -139,22 +139,22 @@ export default function DashboardComp(props: any) {
           </Button>
           <Button
             style={{
-              background: "#1A87DD",
-              borderRadius: "10px",
-              color: "black",
-              fontSize: "14px",
-              width: "150px",
-              border: "none",
-              height: "40px",
-              fontWeight: "500",
-              display: "flex",
-              gap: "5px",
+              background: '#1A87DD',
+              borderRadius: '10px',
+              color: 'black',
+              fontSize: '14px',
+              width: '150px',
+              border: 'none',
+              height: '40px',
+              fontWeight: '500',
+              display: 'flex',
+              gap: '5px',
             }}
           >
             <Image
               style={{
-                width: "21px",
-                maxWidth: "100%",
+                width: '21px',
+                maxWidth: '100%',
               }}
               src="/img/request_icon.png"
               width="21"
@@ -163,9 +163,9 @@ export default function DashboardComp(props: any) {
             />
             <Form.Label
               style={{
-                fontSize: "12px",
+                fontSize: '12px',
                 fontWeight: 500,
-                color: "black",
+                color: 'black',
               }}
             >
               Request Money
@@ -174,26 +174,26 @@ export default function DashboardComp(props: any) {
         </div>
         <div
           style={{
-            display: "flex",
-            justifyContent: "space-between",
-            gap: "5px",
-            marginTop: "20px",
+            display: 'flex',
+            justifyContent: 'space-between',
+            gap: '5px',
+            marginTop: '20px',
           }}
         >
           <Form.Label
             style={{
-              fontSize: "12px",
+              fontSize: '12px',
               fontWeight: 600,
-              color: "black",
+              color: 'black',
             }}
           >
             Last Transactions
           </Form.Label>
           <Form.Label
             style={{
-              fontSize: "12px",
+              fontSize: '12px',
               fontWeight: 600,
-              color: "#3491DB",
+              color: '#3491DB',
             }}
           >
             View All

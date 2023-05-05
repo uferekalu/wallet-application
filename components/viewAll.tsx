@@ -1,33 +1,33 @@
-import Image from "next/image";
-import { Form } from "react-bootstrap";
+import Image from 'next/image';
+import { Form } from 'react-bootstrap';
 
 export default function ViewAll(props: any) {
   return (
     <>
       <div
         style={{
-          display: "flex",
-          justifyContent: "space-between",
-          gap: "5px",
-          marginTop: "20px",
+          display: 'flex',
+          justifyContent: 'space-between',
+          gap: '5px',
+          marginTop: '20px',
         }}
       >
         <div
           style={{
-            display: "flex",
-            flexDirection: "column",
+            display: 'flex',
+            flexDirection: 'column',
           }}
         >
           <div
             style={{
-              display: "flex",
-              gap: "10px",
+              display: 'flex',
+              gap: '10px',
             }}
           >
             <Image
               style={{
-                width: "40px",
-                maxWidth: "100%",
+                width: '40px',
+                maxWidth: '100%',
               }}
               src={props.profPic}
               width="40"
@@ -36,10 +36,10 @@ export default function ViewAll(props: any) {
             />
             <Image
               style={{
-                width: "18px",
-                maxWidth: "100%",
-                marginTop: "25px",
-                marginLeft: "-20px",
+                width: '18px',
+                maxWidth: '100%',
+                marginTop: '25px',
+                marginLeft: '-20px',
               }}
               src={props.transactionIcon}
               width="18"
@@ -48,24 +48,24 @@ export default function ViewAll(props: any) {
             />
             <div
               style={{
-                display: "flex",
-                flexDirection: "column",
+                display: 'flex',
+                flexDirection: 'column',
               }}
             >
               <Form.Label
                 style={{
-                  fontSize: "13px",
+                  fontSize: '13px',
                   fontWeight: 500,
-                  color: "black",
+                  color: 'black',
                 }}
               >
                 {props.name}
               </Form.Label>
               <Form.Label
                 style={{
-                  fontSize: "11px",
+                  fontSize: '11px',
                   fontWeight: 400,
-                  marginTop: "-5px",
+                  marginTop: '-5px',
                 }}
               >
                 {props.date}
@@ -75,16 +75,16 @@ export default function ViewAll(props: any) {
         </div>
         <div
           style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
           <Form.Label
             style={{
-              fontSize: "14px",
+              fontSize: '14px',
               fontWeight: 600,
-              color: "black",
+              color: 'black',
             }}
           >
             {props.amount}

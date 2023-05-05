@@ -1,8 +1,8 @@
-import Head from "next/head";
-import SignupComp from "@/components/SignupComp";
-import styles from "@/styles/Home.module.css";
+import Head from 'next/head';
+import SignupComp from '@/components/SignupComp';
+import styles from '@/styles/Home.module.css';
 
-export default function Signup(props: any) {
+export default function Signup() {
   return (
     <>
       <Head>
@@ -14,16 +14,16 @@ export default function Signup(props: any) {
       <div
         className={styles.signup}
         style={{
-          display: "flex",
-          flexDirection: "column",
+          display: 'flex',
+          flexDirection: 'column',
         }}
       >
         <div
           style={{
-            display: "flex",
-            flexDirection: "column",
-            width: "350px",
-            height: "812px",
+            display: 'flex',
+            flexDirection: 'column',
+            width: '350px',
+            height: '812px',
           }}
         >
           <SignupComp />

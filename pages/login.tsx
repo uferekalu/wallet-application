@@ -1,6 +1,6 @@
-import Head from "next/head";
-import LoginComp from "@/components/loginComp";
-import styles from "@/styles/Home.module.css";
+import Head from 'next/head';
+import LoginComp from '@/components/loginComp';
+import styles from '@/styles/Home.module.css';
 
 export default function Login(props: any) {
   return (
@@ -14,16 +14,16 @@ export default function Login(props: any) {
       <div
         className={styles.signup}
         style={{
-          display: "flex",
-          flexDirection: "column",
+          display: 'flex',
+          flexDirection: 'column',
         }}
       >
         <div
           style={{
-            display: "flex",
-            flexDirection: "column",
-            width: "350px",
-            height: "812px",
+            display: 'flex',
+            flexDirection: 'column',
+            width: '350px',
+            height: '812px',
           }}
         >
           <LoginComp />

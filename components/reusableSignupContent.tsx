@@ -1,28 +1,27 @@
-import { Form } from "react-bootstrap";
-import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
+import { Form } from 'react-bootstrap';
+import { BsFillEyeFill, BsFillEyeSlashFill } from 'react-icons/bs';
 
 export default function ReusableSignupContent(props: any) {
   return (
     <>
       <Form.Label
         style={{
-          fontSize: "13px",
+          fontSize: '13px',
           fontWeight: 400,
-          color: "black",
-          marginTop: "40px",
+          color: 'black',
+          marginTop: '40px',
         }}
       >
         {props.caption}
       </Form.Label>
-
       <input
         style={{
-          border: "1px solid rgba(27, 42, 59, 0.1)",
-          width: "100%",
-          height: "49px",
-          fontSize: "12px",
-          borderRadius: "10px",
-          padding: "10px",
+          border: '1px solid rgba(27, 42, 59, 0.1)',
+          width: '100%',
+          height: '49px',
+          fontSize: '12px',
+          borderRadius: '10px',
+          padding: '10px',
         }}
         type={props.type}
         placeholder={props.placeholder}
@@ -31,10 +30,10 @@ export default function ReusableSignupContent(props: any) {
         (props.showPassword ? (
           <BsFillEyeSlashFill
             style={{
-              marginLeft: "auto",
-              marginRight: "10px",
-              marginTop: "-30px",
-              cursor: "pointer",
+              marginLeft: 'auto',
+              marginRight: '10px',
+              marginTop: '-30px',
+              cursor: 'pointer',
             }}
             onClick={() =>
               props.setShowPassword((prevState: boolean) => !prevState)
@@ -43,10 +42,10 @@ export default function ReusableSignupContent(props: any) {
         ) : (
           <BsFillEyeFill
             style={{
-              marginLeft: "auto",
-              marginRight: "10px",
-              marginTop: "-30px",
-              cursor: "pointer",
+              marginLeft: 'auto',
+              marginRight: '10px',
+              marginTop: '-30px',
+              cursor: 'pointer',
             }}
             onClick={() =>
               props.setShowPassword((prevState: boolean) => !prevState)
@@ -57,10 +56,10 @@ export default function ReusableSignupContent(props: any) {
         (props.showConfirmPassword ? (
           <BsFillEyeSlashFill
             style={{
-              marginLeft: "auto",
-              marginRight: "10px",
-              marginTop: "-30px",
-              cursor: "pointer",
+              marginLeft: 'auto',
+              marginRight: '10px',
+              marginTop: '-30px',
+              cursor: 'pointer',
             }}
             onClick={() =>
               props.setShowConfirmPassword((prevState: boolean) => !prevState)
@@ -69,10 +68,10 @@ export default function ReusableSignupContent(props: any) {
         ) : (
           <BsFillEyeFill
             style={{
-              marginLeft: "auto",
-              marginRight: "10px",
-              marginTop: "-30px",
-              cursor: "pointer",
+              marginLeft: 'auto',
+              marginRight: '10px',
+              marginTop: '-30px',
+              cursor: 'pointer',
             }}
             onClick={() =>
               props.setShowConfirmPassword((prevState: boolean) => !prevState)
